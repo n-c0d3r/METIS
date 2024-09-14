@@ -37,6 +37,11 @@ set(METIS_COPTIONS "${METIS_COPTIONS} -DREALTYPEWIDTH=64")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${METIS_COPTIONS}")
 
 
+if(NOT EXISTS "${CMAKE_CURRENT_LIST_DIR}/build/xinclude")
+    file(MAKE_DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/build/xinclude")
+endif()
+
+
 # Add include directories.
 # i.e., the -I equivalent
 add_subdirectory(GKlib)
