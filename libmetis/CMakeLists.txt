@@ -9,7 +9,7 @@ add_library(metis ${METIS_LIBRARY_TYPE} ${metis_sources})
 target_link_libraries(metis GKlib)
 target_include_directories(metis 
   PUBLIC 
-    ./GKlib
+    ${CMAKE_CURRENT_LIST_DIR}/../GKlib
     ${CMAKE_CURRENT_LIST_DIR}/../include
 )
 
